@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Index
+{% endblock %}
+
+{% block strap%}
+<link rel="stylesheet" href="blog/index.css">
+{% endblock %}
+
+{% block content%}
+{% include 'blog/include/nav.html'%}
+<ul>
+{% for x,y in posts.items %}
+    <li><a href="{% url 'posts' x %}">{{ y }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

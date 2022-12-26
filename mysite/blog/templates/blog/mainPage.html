@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}
+.Blog 
+{% endblock %}
+
+{% block strap%}
+<link rel="stylesheet" href="blog/mainPage.css">
+{% endblock %}
+
+{% block content%}
+{% include 'blog/include/allpost.html' %}
+<ul>
+{% for x in posts %}
+    <li><img src="" alt=""></li>
+{% endfor %}
+</ul>
+{% endblock %}

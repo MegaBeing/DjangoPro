@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+{{ title|title }}
+{% endblock  %}
+
+{% block strap %}
+<link rel="stylesheet" href="{% static "blog/posts.css" %}">
+{% endblock %}
+
+{% block content %}
+{% include 'blog/include/nav.html'%}
+<h1><span id="heading">{{ heading|title }}</span></h1>
+<img id="blogImg" src="https://cdn.pixabay.com/photo/2017/01/24/03/53/plant-2004483_960_720.jpg" alt="">
+<div id="creator">By Sahil Jain <span id="last_updated">last updated: Dec 2020</span></div>
+<div id="paragraph">
+<p id="firstPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit officia, debitis consectetur eius perspiciatis quam accusamus quae architecto earum veritatis nemo nulla, animi eligendi ab repellendus excepturi sed esse dolorem.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt labore soluta reiciendis amet rem ad accusantium tenetur quisquam quas vitae dolore possimus numquam quam odit qui voluptatum commodi, optio accusamus?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto hic ratione necessitatibus voluptate voluptates, quasi aliquam odit quidem fugit vel iusto, officiis accusamus ullam soluta distinctio? Numquam rerum ea asperiores!</p>
+</div>
+{% endblock %}
